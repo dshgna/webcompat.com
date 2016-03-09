@@ -111,7 +111,7 @@ def get_browser_name(user_agent_string):
             ua_dict.get('os').get('family') == 'Firefox OS'):
         name = 'other'
     if device == 'Tablet':
-        name += " " + device.lower()
+        name = name.partition(" mobile")[0] + " " + device.lower()
     return name
 
 
